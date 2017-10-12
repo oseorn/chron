@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chron Time Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/logger.js"></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div>
+      <h1 class="title" id="title" style="display:inline-block">Chron</h1>
+      <p class="comment title--comment">v0.1</p>
+    </div>
+    <div>
+      <p class="comment">A simple time tracking application.</p>
+    </div>
+    <div style="padding-top:40px">
+      <h2>Log data</h2>
+
+      <nobr><p class="activity-form">New Activity</p></nobr>
+      <div style="height:124px;width:200px;display:inline-block">
+        <div style="width:50%;float:left">
+          <p class="activity-form" style="height:25%">date</p>
+          <p class="activity-form" style="height:25%">start</p>
+          <p class="activity-form" style="height:25%">end</p>
+          <p class="activity-form" style="height:25%">type</p>
+        </div>
+        <div style="height:100%;width:50%;float:right">
+          <form style="height:100%">
+            <div style="height:25%">
+              <input type="date" id="date" style="width:100%;margin-top:10%;">
+            </div>
+            <div style="height:25%">
+            <input type="time" id="startTime" style="width:100%;height:25%;margin-top:10%;">
+            </div>
+            <div style="height:25%">
+              <input type="time" id="endTime" style="width:100%;height:25%;margin-top:8%;">
+            </div>
+            <div style="height:25%">
+              <input type="text" id="type" style="width:100%;height:25%;margin-top:5%;">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--
+        <form>
+          <p class="activity-form">New Activity</p>
+          <div style="height:100px;width:240px">style="display:inline-block"
+            <div style="height:25%">
+              <p class="activity-form" style="float:left; margin:0 0 0 0">date</p>
+              <input type="date" id="date" style="float:right">
+            </div>
+            <div style="height:25%">
+              <p class="activity-form" style="float:left; margin:0 0 0 0">start</p>
+              <input type="time" id="startTime" style="float:right">
+            </div>
+            <div style="height:25%">
+              <p class="activity-form" style="float:left; margin:0 0 0 0">end</p>
+              <input type="time" id="endTime" style="float:right">
+            </div>
+            <div style="height:25%">
+              <p class="activity-form" style="float:left; margin:0 0 0 0">type</p>
+              <input type="text" id="type" style="float:right; width:53%">
+            </div>
+          </div>
+
+          <div>
+            <input type="button" onclick="logData()" value="Send">
+          </div>
+        </form>
+      -->
+    </div>
+
+    <div style="padding-top:40px">
+      <h2>Write to JSON</h2>
+      <form>
+        <input type="button" onclick="downloadJSON()" value="Write file">
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
